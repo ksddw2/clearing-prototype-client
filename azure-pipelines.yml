@@ -21,7 +21,7 @@ steps:
     azureResourceGroup: 'clearing-prototype-rg'
     kubernetesCluster: 'clearing-prototype'
     command: 'package'
-    chartPath: 'charts/clearing-prototype-client'
+    chartPath: 'clearing-prototype-client'
 
 - task: Docker@2
   inputs:
