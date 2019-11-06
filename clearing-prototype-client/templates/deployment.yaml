@@ -20,4 +20,4 @@ spec:
         image: "clearingregistry.azurecr.io/clearing-proto-client:{{ .Values.image.tag }}"
         ports:
         - name: app
-          containerPort: 8080
+          containerPort: 4200
