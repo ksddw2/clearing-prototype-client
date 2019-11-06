@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clearing-prototype-client
+  labels:
+    app: clearing-prototype-client
+spec:
+  replicas: 2
+  serviceName: clearing-prototype-client
+  selector:
+    matchLabels:
+      app: clearing-prototype-client
+  template:
+    metadata:
+      labels:
+        app: clearing-prototype-client
+    spec:
+      containers:
+      - name: app
+        image: "clearingregistry.azurecr.io/clearing-proto-client:{{ .Values.image.tag }}"
+        ports:
+        - name: app
+          containerPort: 8080
