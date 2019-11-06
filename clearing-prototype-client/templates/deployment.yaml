@@ -5,7 +5,7 @@ metadata:
   labels:
     app: clearing-prototype-client
 spec:
-  replicas: 2
+  replicas: 1
   serviceName: clearing-prototype-client
   selector:
     matchLabels:
