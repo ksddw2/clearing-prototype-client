@@ -39,6 +39,22 @@ export class AppComponent implements OnInit, OnDestroy {
    
     rowData: any;
 
+    statusBar = {
+      statusPanels: [
+        {
+          statusPanel: "agTotalAndFilteredRowCountComponent",
+          align: "left"
+        },
+        {
+          statusPanel: "agTotalRowCountComponent",
+          align: "center"
+        },
+        { statusPanel: "agFilteredRowCountComponent" },
+        { statusPanel: "agSelectedRowCountComponent" },
+        { statusPanel: "agAggregationComponent" }
+      ]
+    };
+	
     constructor(private dataService: AppService) { }
 
     ngOnInit() {
