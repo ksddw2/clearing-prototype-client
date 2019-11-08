@@ -72,6 +72,7 @@
           "configurations": {
             "production": {
               "browserTarget": "aggrid-demo:build:production"
+			  "publicHost":"http://40.85.74.142/client/"
             }
           }
         },
