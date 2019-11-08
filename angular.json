@@ -67,12 +67,12 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "aggrid-demo:build"
+            "browserTarget": "aggrid-demo:build",
 			"publicHost":"http://40.85.74.142/client/"
           },
           "configurations": {
             "production": {
-              "browserTarget": "aggrid-demo:build:production"
+              "browserTarget": "aggrid-demo:build:production",
 			  "publicHost":"http://40.85.74.142/client/"
             }
           }
