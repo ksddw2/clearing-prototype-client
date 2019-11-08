@@ -13,7 +13,7 @@ export class AppService {
     socket: Socket;
     observer: Observer<any>;
     
-    private baseUrl = 'http://40.127.184.241:5000';
+    private baseUrl = 'http://40.85.74.142/broadcaster';
    // private baseUrl = 'http://localhost:1337/localhost:5000';
 
     constructor(private http: HttpClient) { }
