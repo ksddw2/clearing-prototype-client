@@ -1,0 +1,35 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: clearing-ingress
+  namespace: default
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.org/websocket-services: "clearing-broadcaster"
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/rewrite-target	: /$2
+    nginx.ingress.kubernetes.io/websocket-services : "clearing-broadcaster"
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          serviceName: clearing-prototype-client
+          servicePort: 4200
+        path: /client(/|$)(.*)
+      - backend:
+          serviceName: clearing-inbound
+          servicePort: 8080
+        path: /inbound(/|$)(.*)
+      - backend:
+          serviceName: clearing-broadcaster
+          servicePort: 5000
+        path: /broadcaster(/|$)(.*)
+      - backend:
+          serviceName: clearing-broadcaster
+          servicePort: 5000
+        path: /socket.io(/|$)(.*)
+      - backend:
+          serviceName: clearing-broadcaster
+          servicePort: 5000
+        path: /sockjs-node(/|$)(.*)
