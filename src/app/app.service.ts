@@ -24,7 +24,9 @@ export class AppService {
     }
 
     getQuotes(): Observable < any > {
-      this.socket = socketIo(this.baseUrl);
+      //this.socket = socketIo(this.baseUrl);
+	  this.socket = socketIo.connect(this.baseUrl, {
+		'path': '/broadcaster/socket.io' });
       this.socket.on('data', (res) => {
         this.observer.next(res.data);
       });
