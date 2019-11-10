@@ -25,11 +25,3 @@ spec:
           serviceName: clearing-broadcaster
           servicePort: 5000
         path: /broadcaster(/|$)(.*)
-      - backend:
-          serviceName: clearing-broadcaster
-          servicePort: 5000
-        path: /socket.io(/|$)(.*)
-      - backend:
-          serviceName: clearing-broadcaster
-          servicePort: 5000
-        path: /sockjs-node(/|$)(.*)
