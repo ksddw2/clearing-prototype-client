@@ -28,7 +28,7 @@ export class AppService {
 
     getQuotes(): Observable < any > {
 	//  ioClient.on("FromAPI", (msg) => {console.info(msg), this.observer.next(msg.data);});
-		this.ioClient.on("FromAPI", (msg) => {console.info(msg);});
+		this.ioClient.on("trade-data", (msg) => {console.info(msg);});
 		return this.createObservable();
     }
 

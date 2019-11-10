@@ -16,9 +16,9 @@ export class AppComponent implements OnInit, OnDestroy {
 
     columnDefs = [
         {headerName: 'Status', field: 'Status', sortable: true, filter: true },
-	{headerName: 'Coupon', field: 'Coupon', sortable: true, filter: true, type: ['numericColumn', 'nonEditableColumn']},
+	{headerName: 'Coupon', field: 'Coupon', sortable: true, filter: true, filter: 'agNumberColumnFilter'},
         {headerName: 'EntityCusip', field: 'EntityCusip', sortable: true, filter: true },
-	{headerName: 'Trader', field: 'Trader', sortable: true, filter: true },
+	{headerName: 'Trader', field: 'Trader', sortable: true, filter: filter: 'agTextColumnFilter' },
 	{headerName: 'TradeId', field: 'TradeId', sortable: true, filter: true },
 	{headerName: 'Sector', field: 'Sector', sortable: true, filter: true },
 	{headerName: 'Ticker', field: 'Ticker', sortable: true, filter: true },
